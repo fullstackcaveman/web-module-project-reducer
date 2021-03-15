@@ -11,6 +11,7 @@ import {
 	changeOperator,
 	clearDisplay,
 	addToMemory,
+	pullFromMemory,
 } from './actions';
 
 function App() {
@@ -51,7 +52,10 @@ function App() {
 								value={'M+'}
 								onClick={() => dispatch(addToMemory(state.total))}
 							/>
-							<CalcButton value={'MR'} />
+							<CalcButton
+								value={'MR'}
+								onClick={() => dispatch(pullFromMemory())}
+							/>
 							<CalcButton value={'MC'} />
 						</div>
 
